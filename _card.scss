@@ -1,0 +1,44 @@
+.page__article {
+  background-color: $card-bg;
+  background-image: url("poza2.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: $radius;
+  box-shadow: $shadow;
+
+  padding: 1.5rem;
+
+  width: 100%;
+  max-width: 900rem;
+
+  margin: 2rem auto 2rem 7.5rem; // 🔥 MUTAT UȘOR SPRE DREAPTA
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+
+  @include smooth-transition;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  button {
+    background: $primary-color;
+    color: white;
+    border: none;
+    border-radius: $radius-pill;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    align-self: center;
+
+    @include smooth-transition;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}

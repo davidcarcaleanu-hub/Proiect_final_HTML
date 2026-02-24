@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Instalații luminițe de Crăciun</title>
+    <link rel="stylesheet" href="stil.css" />
+    <link rel="stylesheet" href="stil1.css" />
+  </head>
+
+  <body>
+    <!-- IFRAME — rama cu beculețe -->
+    <iframe src="rama.html" class="lights-embed" scrolling="no"></iframe>
+
+    <!-- AUDIO cu autoplay și muted -->
+    <audio id="muzica" autoplay muted loop>
+      <source src="melodie1.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script>
+      const audio = document.getElementById("muzica");
+      function pornesteMuzica() {
+        audio.muted = false;
+        audio.play();
+        document.removeEventListener("click", pornesteMuzica);
+        document.removeEventListener("scroll", pornesteMuzica);
+      }
+      document.addEventListener("click", pornesteMuzica);
+      document.addEventListener("scroll", pornesteMuzica);
+    </script>
+
+    <a href="#main" class="skip-link">Treci la ce este important</a>
+
+    <!-- Conținutul principal -->
+    <div class="page">
+      <header class="page__title">🎄 Instalații luminițe 🎄</header>
+
+      <nav class="page__nav">
+        <a href="#home" class="page__nav-link">Home</a>
+        <a href="#about" class="page__nav-link">About</a>
+        <a href="#contact" class="page__nav-link">Contact</a>
+        <a href="#luminite" class="page__nav-link">Lights</a>
+      </nav>
+
+      <main id="main" class="page__articles">
+        <article class="page__article">
+          <h2 class="page__article-text page__article-text--primary">
+            Articol 1 - Instalații de interior
+          </h2>
+          <p>
+            Instalațiile de interior sunt esențiale pentru a aduce spiritul
+            Crăciunului în orice locuință. Fie că decorezi bradul, livingul sau
+            ferestrele, luminițele potrivite pot transforma o cameră obișnuită
+            într-un spațiu cald și plin de culoare.
+          </p>
+          <p>
+            Cele mai populare variante includ instalațiile cu LED, benzile
+            luminoase flexibile și plasele pentru ferestre. Acestea sunt
+            economice, sigure și oferă o paletă largă de culori și jocuri de
+            lumină.
+          </p>
+          <p>
+            Vă aducem o atmosferă de sărbătoare direct la dumneavoastră acasă la
+            un preț rezonabil,astfel încât să vă bucurați de cele mai bune
+            Sărbători alături de prietenii și familia.
+          </p>
+        </article>
+
+        <article class="page__article page__article--lights">
+          <h2 class="page__article-text">
+            Articol 2 - Instalații pentru exterior
+          </h2>
+          <p>
+            Instalațiile de luminițe pentru exterior sunt ideale pentru a
+            transforma orice casă, balcon sau grădină într-un decor de poveste
+            în perioada sărbătorilor. Acestea sunt concepute special pentru a
+            rezista la temperaturi scăzute, umiditate și vânt, oferind un
+            iluminat intens și sigur chiar și în cele mai friguroase zile de
+            iarnă.
+          </p>
+          <p>
+            Printre cele mai populare variante se numără instalațiile tip
+            perdea, ghirlandele LED, jocurile luminoase icicle pentru acoperiș
+            și plasele luminoase perfecte pentru garduri și arbuști. Acestea nu
+            doar că oferă un efect vizual spectaculos, dar sunt și extrem de
+            eficiente din punct de vedere energetic datorită tehnologiei LED.
+          </p>
+          <p>
+            Aceste instalații vor aduce un plus de spelndoare casei tale și te
+            vor încânta cu ambiana pe care o crează astfel încât tu să ai un
+            Crăciun de poveste.
+          </p>
+        </article>
+      </main>
+
+      <section class="page__shop">🎅 Oferte de Crăciun 🎅</section>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__texts">
+            <p class="footer__text">&copy; 2025 Instalatii luminite</p>
+            <p class="footer__text">&copy; All rights reserved</p>
+          </div>
+          <div class="footer__social">
+            <a href="#" class="footer__link">Products</a>
+            <a href="#" class="footer__link">FAQ</a>
+            <a href="#" class="footer__link">Contact Us</a>
+            <a href="#" class="footer__link">Shopping Online</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

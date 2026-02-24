@@ -1,0 +1,111 @@
+// ============================
+// Variabile
+// ============================
+$shadow-soft: 0 2px 5px rgba(0, 0, 0, 0.1);
+$primary-color: #4caf50;
+$primary-dark: #388e3c;
+$radius-pill: 50px;
+$breakpoint-mobile: 768px;
+
+// ============================
+// Mixins
+// ============================
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin smooth-transition {
+  transition: all 0.3s ease;
+}
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// ============================
+// Header SCSS adaptat la HTML
+// ============================
+
+// Titlu cu tranziție la hover
+.page__title {
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 40px;
+  color: rgb(200, 162, 109);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include smooth-transition;
+
+  &:hover {
+    color: $primary-color;
+    transform: scale(1.05); // mic zoom la hover
+  }
+}
+
+// Navbar
+// Navbar
+.page__nav {
+  list-style: none;
+  @include flex-between-center;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+
+  a.page__nav-link {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 1.6rem; // font mai mare
+    position: relative;
+    @include smooth-transition;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.25rem;
+      width: 0;
+      height: 2px;
+      background: $primary-color;
+      @include smooth-transition;
+    }
+
+    &:hover {
+      color: $primary-color;
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @include respond-to($breakpoint-mobile) {
+      font-size: 1.2rem; // font mai mic pe mobil
+    }
+  }
+
+  @include respond-to($breakpoint-mobile) {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+// ============================
+// Animations
+// ============================
+@keyframes navbarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

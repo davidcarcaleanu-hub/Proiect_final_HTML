@@ -1,0 +1,24 @@
+// ============================
+// Mixins
+// ============================
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin smooth-transition {
+  transition: all $transition-speed ease-in-out;
+}
+
+@mixin respond-to($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
