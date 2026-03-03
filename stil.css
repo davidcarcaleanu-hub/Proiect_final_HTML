@@ -34,7 +34,6 @@ body {
   margin: 100px auto 80px auto;
   padding: 20px;
   color: white;
-}
 
 .page__title {
   text-align: center;
@@ -45,6 +44,7 @@ body {
   color: rgb(200, 162, 109);
 }
 
+/* Page Continut principal incheiat*/
 /* --- Navigation --- */
 .page__nav {
   display: flex;
